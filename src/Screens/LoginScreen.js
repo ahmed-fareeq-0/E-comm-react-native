@@ -1,16 +1,17 @@
 import { TextInput, Text, StyleSheet, View, Dimensions } from "react-native";
 
-export default function LoginScreen() {
+export default function LoginScreen({ navigation }) {
     return (
         <View style={styles.containerLogin}>
-            <Text style={styles.titleLogin}>Login</Text>
+            <Text style={styles.titleLogin}>Sign In</Text>
             <View style={styles.inputContainer}>
                 <TextInput style={styles.input} placeholder="Enter Email" />
                 <TextInput style={styles.input} placeholder="Enter Password" />
                 <View style={styles.info}>
+                    <Text style={styles.btn}  >Sign In</Text>
                     <Text style={styles.info1}>create new account</Text>
                     <Text style={styles.info2}>forgot password?</Text>
-                    <Text style={styles.info3}>Sign Up</Text>
+                    <Text style={styles.info3} onPress={() => navigation.navigate('Register')}>Sign Up</Text>
                 </View>
             </View>
 
@@ -34,6 +35,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
+        backgroundColor: '#2C3333',
     },
     inputContainer: {
         flexDirection: 'column',
@@ -49,6 +51,15 @@ const styles = StyleSheet.create({
         paddingLeft: 8,
         borderRadius: 8,
         color: '#495579',
+    },
+    btn:{
+        fontSize:20,
+        backgroundColor:'#3F3B6C',
+        paddingHorizontal:45,
+        paddingVertical:5,
+        fontWeight:'bold',
+        color:'#fff',
+        marginBottom:25
     },
     info:{
         margin:margin,
