@@ -1,6 +1,6 @@
 import { TextInput, Text, StyleSheet, View, Dimensions } from "react-native";
 
-export default function LoginScreen({ navigation }) {
+const LoginScreen = ({ navigation }) => {
     return (
         <View style={styles.containerLogin}>
             <Text style={styles.titleLogin}>Sign In</Text>
@@ -79,3 +79,5 @@ const styles = StyleSheet.create({
         fontWeight: 'bold'
     },
 })
+
+export default LoginScreen

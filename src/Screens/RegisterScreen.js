@@ -1,6 +1,6 @@
 import { TextInput, Text, StyleSheet, View, Dimensions } from "react-native";
 
-export default function RegisterScreen({ navigation }) {
+const RegisterScreen = ({ navigation }) => {
     return (
         <View style={styles.containerLogin}>
             <Text style={styles.titleLogin}>Sign Up</Text>
@@ -81,3 +81,5 @@ const styles = StyleSheet.create({
     },
 
 })
+
+export default RegisterScreen

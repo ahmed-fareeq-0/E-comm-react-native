@@ -1,15 +1,21 @@
 import { StyleSheet, View, Text } from "react-native";
+import Header from "../Components/Header";
+import Products from "../Components/Products";
 
-export default function HomeScreen () {
+const HomeScreen = () => {
     return (
-        <View>
-            <Text style={Styles.bg}>Home</Text>
+        <View style={styles.homeContainer}>
+            <Header />
+            <Products />
         </View>
     )
 }
 
-const Styles = StyleSheet.create({
-    bg:{
-        color:'red'
-    }
+const styles = StyleSheet.create({
+    homeContainer:{
+        flex:1,
+        backgroundColor:'#FFF'
+    },
 })
+
+export default HomeScreen
