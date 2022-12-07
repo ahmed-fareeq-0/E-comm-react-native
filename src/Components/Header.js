@@ -5,9 +5,9 @@ const Header = () => {
     return (
         <View style={styles.headerContainer}>
             <View style={styles.headerIcons}>
-                <FontAwesome name="opencart" size={30} color="#fff" />
-                <AntDesign name="search1" size={35} color="#fff" />
-                <Ionicons name="menu-sharp" size={35} color="#fff" />
+                <FontAwesome name="opencart" size={30} color="#333333" />
+                <AntDesign name="search1" size={35} color="#333333" />
+                <Ionicons name="menu-sharp" size={35} color="#333333" />
             </View>
         </View>
     )

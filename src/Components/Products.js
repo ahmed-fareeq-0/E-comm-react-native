@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { View, Text, StyleSheet, ScrollView, FlatList } from "react-native";
+import CardProduct from "./CardProduct";
 
 // const [sections, setSections] = useState([
 //     {item:'all'},
@@ -30,13 +31,11 @@ const sections = [
 
 const Products = () => {
     return (
-        <View>
-
+        <View style={styles.productsContainer}>
             {<FlatList
                 data={sections}
                 keyExtractor={(item, index) => index}
                 horizontal
-                //   contentContainerStyle={{ paddingBottom: 180 }}
                 renderItem={({ item }) => {
                     return (
                         <View style={styles.sectionContainer}>
@@ -45,16 +44,18 @@ const Products = () => {
                     )
                 }}
             />}
-
+            <CardProduct />
         </View>
     )
 }
 
 const styles = StyleSheet.create({
-    scrollViewContainer: {
+    productsContainer: {
         // backgroundColor: 'red',
         // marginHorizontal: 18,
         // marginVertical: 15,
+
+        alignItems:'center'
 
     },
     sectionContainer: {
@@ -67,7 +68,7 @@ const styles = StyleSheet.create({
         paddingVertical:10,
         backgroundColor:'#F2A07B',
         borderRadius:20,
-
+        color:'#333333'
     },
 })
 
