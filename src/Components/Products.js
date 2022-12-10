@@ -3,6 +3,9 @@ import { View, Text, StyleSheet, ScrollView, FlatList, Dimensions } from "react-
 import { Image } from "react-native";
 import CardProduct from "./CardProduct";
 import { useFonts } from 'expo-font';
+import { Allerta_400Regular } from '@expo-google-fonts/allerta';
+import AppLoading from 'expo-app-loading'
+
 
 
 
@@ -56,9 +59,16 @@ const ProductsDate = [
 ]
 
 const Products = () => {
-  // const [fontsLoaded] = useFonts({
-  //   'Inter-Black': require('../../assets/fonts/Oswald-VariableFont_wght.ttf'),
-  // });
+  let [fontsLoaded, error] = useFonts({
+    Allerta_400Regular
+  });
+
+  if(!fontsLoaded){
+    return <AppLoading />
+  }
+
+
+
   return (
     <View style={styles.productsContainer}>
       <ScrollView>
@@ -133,6 +143,7 @@ const styles = StyleSheet.create({
   allSections: {
     fontSize: 16,
     fontWeight: '500',
+    fontFamily:'Allerta_400Regular',
     paddingHorizontal: 25,
     paddingVertical: 10,
     backgroundColor: '#76BA99',
@@ -148,15 +159,16 @@ const offset = 40;
 const radius = 20;
 const styless = StyleSheet.create({
   container: {
-    width: deviceWidth - 130,
+    // width:deviceWidth,
     alignItems: 'center',
     // marginTop: 25,
-    marginVertical: 20
+    marginVertical: 20,
   },
   cardContainer: {
     width: 290 - offset,
     // backgroundColor: '#a29bfe',
     height: 200,
+    // marginLeft:50,
     // borderRadius: radius,borderBottomColor:'red',
     // borderWidth:10,
     // borderStyle:'solid',
@@ -188,10 +200,10 @@ const styless = StyleSheet.create({
   categoryStyle: {
     fontWeight: '500',
     fontSize: 16,
-    color: '#333'
+    color: '#76BA99'
   },
   infoStyle: {
-    marginHorizontal: 10,
+    marginHorizontal: 20,
     marginVertical: 5,
     flexDirection: 'row',
     alignItems: 'center',
@@ -204,7 +216,8 @@ const styless = StyleSheet.create({
   section: {
     paddingHorizontal: 25,
     paddingTop: 20,
-    fontWeight: 'bold',
+    // fontWeight: 'bold',
+    fontFamily:"Allerta_400Regular",
     fontSize: 20
   }
 });
