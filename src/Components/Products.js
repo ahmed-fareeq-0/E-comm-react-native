@@ -1,21 +1,12 @@
 
-import { View, StyleSheet, ScrollView} from "react-native";
-import { Allerta_400Regular } from '@expo-google-fonts/allerta';
-import { useFonts } from 'expo-font';
-import AppLoading from 'expo-app-loading';
+import { View, StyleSheet, ScrollView } from "react-native";
 
 import AllSections from "./AllSections";
 import Product from "./Product";
 
 
 const Products = () => {
-  let [fontsLoaded, error] = useFonts({
-    Allerta_400Regular
-  });
-
-  if(!fontsLoaded){
-    return <AppLoading />
-  }
+  
 
 
 

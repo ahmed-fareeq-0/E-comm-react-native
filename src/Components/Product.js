@@ -35,11 +35,11 @@ const Product = () => {
 
     let [fontsLoaded, error] = useFonts({
         Allerta_400Regular
-      });
-    
-      if(!fontsLoaded){
+    });
+
+    if (!fontsLoaded) {
         return <AppLoading />
-      }
+    }
 
     return (
         <View>
@@ -74,14 +74,14 @@ const Product = () => {
                                 <Image style={styles.imageStyle} source={item.img} />
                                 <View style={styles.infoStyle}>
                                     <Text style={styles.titleStyle}>{item.title}</Text>
-                                    <Text style={styles.categoryStyle}>{item.title}</Text>
+                                    <Text style={styles.categoryStyle}>{item.price}</Text>
                                 </View>
                             </View>
                         </View>
                     )
                 }}
             />}
-             <Text style={styles.section}>Shoes section</Text>
+            <Text style={styles.section}>Shoes section</Text>
             {<FlatList
                 data={ProductsDate}
                 keyExtractor={(item, index) => index}
@@ -93,7 +93,7 @@ const Product = () => {
                                 <Image style={styles.imageStyle} source={item.img} />
                                 <View style={styles.infoStyle}>
                                     <Text style={styles.titleStyle}>{item.title}</Text>
-                                    <Text style={styles.categoryStyle}>{item.title}</Text>
+                                    <Text style={styles.categoryStyle}>{item.price}</Text>
                                 </View>
                             </View>
                         </View>
@@ -140,7 +140,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
-        
+
     },
     section: {
         paddingHorizontal: 25,
