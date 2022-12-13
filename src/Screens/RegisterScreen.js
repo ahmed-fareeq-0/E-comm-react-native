@@ -12,7 +12,7 @@ const RegisterScreen = ({ navigation }) => {
                     <Text style={styles.btn}  >Sign Up</Text>
                     <Text style={styles.info1}>create new account</Text>
                     <Text style={styles.info2}>forgot password?</Text>
-                    <Text style={styles.info3} onPress={()=> navigation.navigate('Login') }>Sign In</Text>
+                    <Text style={styles.info3} onPress={() => navigation.navigate('Login')}>Sign In</Text>
                 </View>
             </View>
 
@@ -57,14 +57,14 @@ const styles = StyleSheet.create({
         margin: margin,
         alignItems: 'center',
     },
-    btn:{
-        fontSize:20,
-        backgroundColor:'#3F3B6C',
-        paddingHorizontal:45,
-        paddingVertical:5,
-        fontWeight:'bold',
-        color:'#fff',
-        marginBottom:25
+    btn: {
+        fontSize: 20,
+        backgroundColor: '#3F3B6C',
+        paddingHorizontal: 45,
+        paddingVertical: 5,
+        fontWeight: 'bold',
+        color: '#fff',
+        marginBottom: 25
     },
     info1: {
         color: '#FFFBEB',

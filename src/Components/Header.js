@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
     headerContainer: {
         width: deviceWidth,
         height: 60,
-        marginTop:18,
+        marginTop: 18,
         // backgroundColor: '#503429',
         justifyContent: 'center',
         alignItems: 'center',

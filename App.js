@@ -8,6 +8,7 @@ import HomeScreen from './src/Screens/HomeScreen';
 import LoginScreen from './src/Screens/LoginScreen';
 import RegisterScreen from './src/Screens/RegisterScreen';
 import SingleProductScreen from './src/Screens/SingleProductScreen';
+import CartScreen from './src/Screens/CartScreen';
 
 
 const Stack = createNativeStackNavigator();
@@ -15,14 +16,15 @@ export default function App() {
   return (
     <SafeAreaView style={styles.container}>
       <NavigationContainer>
-        <Stack.Navigator screenOptions={{headerShown: false}}>
+        <Stack.Navigator screenOptions={{ headerShown: false }}>
           {/* <Stack.Screen name='Login' component={LoginScreen} /> */}
           {/* <Stack.Screen name='Register' component={RegisterScreen} /> */}
           {/* <Stack.Screen name='Home' component={HomeScreen} /> */}
-          <Stack.Screen name='SingleProduct' component={SingleProductScreen} />
+          {/* <Stack.Screen name='SingleProduct' component={SingleProductScreen} /> */}
+          <Stack.Screen name='Cart' component={CartScreen} />
         </Stack.Navigator>
       </NavigationContainer>
-      
+
     </SafeAreaView>
   );
 }

@@ -12,9 +12,9 @@ const HomeScreen = () => {
 }
 
 const styles = StyleSheet.create({
-    homeContainer:{
-        flex:1,
-        backgroundColor:'#FFF'
+    homeContainer: {
+        flex: 1,
+        backgroundColor: '#FFF'
     },
 })
 

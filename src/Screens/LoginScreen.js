@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         fontSize: 40,
         color: '#FFFBEB',
-        marginBottom:margin,
+        marginBottom: margin,
     },
     containerLogin: {
         flex: 1,
@@ -52,30 +52,30 @@ const styles = StyleSheet.create({
         borderRadius: 8,
         color: '#495579',
     },
-    btn:{
-        fontSize:20,
-        backgroundColor:'#3F3B6C',
-        paddingHorizontal:45,
-        paddingVertical:5,
-        fontWeight:'bold',
-        color:'#fff',
-        marginBottom:25
+    btn: {
+        fontSize: 20,
+        backgroundColor: '#3F3B6C',
+        paddingHorizontal: 45,
+        paddingVertical: 5,
+        fontWeight: 'bold',
+        color: '#fff',
+        marginBottom: 25
     },
-    info:{
-        margin:margin,
-        alignItems:'center',
+    info: {
+        margin: margin,
+        alignItems: 'center',
     },
     info1: {
         color: '#FFFBEB',
-        fontSize:fontSize, 
+        fontSize: fontSize,
     },
     info2: {
         color: '#FFFBEB',
-        fontSize:fontSize,
+        fontSize: fontSize,
     },
     info3: {
         color: 'green',
-        fontSize:fontSize,
+        fontSize: fontSize,
         fontWeight: 'bold'
     },
 })
