@@ -1,7 +1,8 @@
 import { View, Text, StyleSheet, ScrollView, FlatList, Dimensions, Image } from "react-native";
 import { Allerta_400Regular } from '@expo-google-fonts/allerta';
 import { useFonts } from 'expo-font';
-import AppLoading from 'expo-app-loading';
+// import AppLoading from 'expo-app-loading';
+import { useNavigation } from "@react-navigation/native";
 
 const ProductsDate = [
     {
@@ -33,13 +34,14 @@ const ProductsDate = [
 
 const Product = () => {
 
+    const navigation = useNavigation();
     let [fontsLoaded, error] = useFonts({
         Allerta_400Regular
     });
 
-    if (!fontsLoaded) {
-        return <AppLoading />
-    }
+    // if (!fontsLoaded) {
+    //     return <AppLoading />
+    // }
 
     return (
         <View>
@@ -49,11 +51,11 @@ const Product = () => {
                 horizontal
                 renderItem={({ item }) => {
                     return (
-                        <View style={styles.container}>
+                        <View style={styles.container} >
                             <View style={styles.cardContainer}>
-                                <Image style={styles.imageStyle} source={item.img} />
+                                <Image style={styles.imageStyle} source={item.img}  />
                                 <View style={styles.infoStyle}>
-                                    <Text style={styles.titleStyle}>{item.title}</Text>
+                                    <Text style={styles.titleStyle} onPress={() => navigation.navigate('SingleProduct')}  >{item.title}</Text>
                                     <Text style={styles.categoryStyle}>{item.price}</Text>
                                 </View>
                             </View>
@@ -73,7 +75,7 @@ const Product = () => {
                             <View style={styles.cardContainer}>
                                 <Image style={styles.imageStyle} source={item.img} />
                                 <View style={styles.infoStyle}>
-                                    <Text style={styles.titleStyle}>{item.title}</Text>
+                                    <Text style={styles.titleStyle} onPress={() => navigation.navigate('SingleProduct')} >{item.title}</Text>
                                     <Text style={styles.categoryStyle}>{item.price}</Text>
                                 </View>
                             </View>
@@ -92,7 +94,7 @@ const Product = () => {
                             <View style={styles.cardContainer}>
                                 <Image style={styles.imageStyle} source={item.img} />
                                 <View style={styles.infoStyle}>
-                                    <Text style={styles.titleStyle}>{item.title}</Text>
+                                    <Text style={styles.titleStyle} onPress={() => navigation.navigate('SingleProduct')} >{item.title}</Text>
                                     <Text style={styles.categoryStyle}>{item.price}</Text>
                                 </View>
                             </View>

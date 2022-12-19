@@ -9,14 +9,6 @@ const CartScreen = () => {
                 <ScrollView>
                 <Text style={styles.titleScreen}>Cart</Text>
                 <CartProduct />
-                <CartProduct />
-                <CartProduct />
-                <CartProduct />
-                <CartProduct />
-                <CartProduct />
-                <CartProduct />
-                <CartProduct />
-                <CartProduct />
                 </ScrollView>
             </View>
     )
