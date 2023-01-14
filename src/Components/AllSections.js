@@ -1,7 +1,7 @@
 import { Text, View, StyleSheet, FlatList } from "react-native";
 import { Allerta_400Regular } from '@expo-google-fonts/allerta';
 import { useFonts } from 'expo-font';
-import AppLoading from 'expo-app-loading';
+// import AppLoading from 'expo-app-loading';
 
 const sections = [
     { item: 'all' },
@@ -30,9 +30,9 @@ const AllSections = () => {
         Allerta_400Regular
     });
 
-    if (!fontsLoaded) {
-        return <AppLoading />
-    }
+    // if (!fontsLoaded) {
+    //     return <AppLoading />
+    // }
 
     return (
         <View>
