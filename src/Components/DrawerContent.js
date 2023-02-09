@@ -42,6 +42,11 @@ const DrawerContent = () => {
                     <Text style={styles.one}>About</Text>
                 </TouchableOpacity>
 
+                <TouchableOpacity style={styles.item} onPress={() => navigation.navigate("addProduct")} >
+                <MaterialCommunityIcons name="details" size={24} color="black" />
+                    <Text style={styles.one}>Add Product</Text>
+                </TouchableOpacity>
+
             </DrawerContentScrollView>
         </View>
     )

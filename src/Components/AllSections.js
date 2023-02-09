@@ -26,9 +26,9 @@ const sections = [
 
 const AllSections = () => {
 
-    let [fontsLoaded, error] = useFonts({
-        Allerta_400Regular
-    });
+    // let [fontsLoaded, error] = useFonts({
+    //     Allerta_400Regular
+    // });
 
     // if (!fontsLoaded) {
     //     return <AppLoading />

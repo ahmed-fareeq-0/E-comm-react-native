@@ -11,6 +11,7 @@ import RegisterScreen from './src/Screens/RegisterScreen';
 import SingleProductScreen from './src/Screens/SingleProductScreen';
 import CartScreen from './src/Screens/CartScreen';
 import DrawerContent from './src/Components/DrawerContent';
+import AddProduct from './src/Screens/AddProduct';
 
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -28,6 +29,7 @@ export default function App() {
           <Drawer.Screen name='Register' component={RegisterScreen} />
           <Drawer.Screen name='SingleProduct' component={SingleProductScreen} />
           <Drawer.Screen name='Cart' component={CartScreen} />
+          <Drawer.Screen name='addProduct' component={AddProduct} />
         </Drawer.Navigator>
       </NavigationContainer>
     </SafeAreaView>
